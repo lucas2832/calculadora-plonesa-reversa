@@ -22,7 +22,12 @@ public class Calculadora {
     }
 
     public void soma() {
-        operando = visor + operando;
+        operando = operando + visor;
+        visor = operando;
+    }
+
+    public void subtracao () {
+        operando = operando - visor;
         visor = operando;
     }
 }
