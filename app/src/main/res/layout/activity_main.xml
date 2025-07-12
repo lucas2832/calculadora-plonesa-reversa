@@ -135,9 +135,9 @@
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text=","
             android:onClick="@{() -> vm.virgula()}"
+            android:text=","
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/button10"
             app:layout_constraintEnd_toStartOf="@+id/button12"
             app:layout_constraintHorizontal_bias="0.5"
@@ -180,6 +180,7 @@
             android:id="@+id/button15"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.multiplicacao()}"
             android:text="x"
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/button16"
@@ -189,6 +190,7 @@
             android:id="@+id/button16"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.divisao()}"
             android:text="/"
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/button12"
@@ -216,6 +218,7 @@
             android:id="@+id/n"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.n()}"
             android:text="n"
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintStart_toStartOf="@+id/button" />
@@ -225,6 +228,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="i"
+            android:onClick="@{() -> vm.i()}"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintStart_toStartOf="@+id/button2" />
 
@@ -233,6 +237,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="PV"
+            android:onClick="@{() -> vm.pv()}"
             app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintStart_toStartOf="@+id/button3" />
 
@@ -240,9 +245,20 @@
             android:id="@+id/fv"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.fv()}"
             android:text="FV"
             app:layout_constraintBottom_toTopOf="@+id/n"
             app:layout_constraintStart_toStartOf="@+id/n" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:onClick="@{() -> vm.clear()}"
+            android:text="CLEAR"
+            app:layout_constraintBottom_toTopOf="@+id/button13"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

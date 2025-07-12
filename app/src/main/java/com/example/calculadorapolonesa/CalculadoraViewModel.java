@@ -132,7 +132,6 @@ public class CalculadoraViewModel {
     }
 
     public void enter() {
-        // aquilo que ta no visor passa a ser o operando
         calculadora.setVisor(Double.valueOf(visor.getValue()));
         calculadora.enter();
         status = NORMAL;
@@ -149,6 +148,54 @@ public class CalculadoraViewModel {
         calculadora.setVisor(Double.valueOf(visor.getValue()));
         calculadora.subtracao();
         visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void multiplicacao () {
+        calculadora.setVisor(Double.valueOf(visor.getValue()));
+        calculadora.multiplicacao();
+        visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void divisao () {
+        calculadora.setVisor(Double.valueOf(visor.getValue()));
+        calculadora.divisao();
+        visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void i () {
+        calculadora.setVisor(Double.valueOf(visor.getValue()));
+        calculadora.i();
+        visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void n () {
+        calculadora.setVisor(Double.valueOf(visor.getValue()));
+        calculadora.n();
+        visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void fv () {
+        calculadora.setVisor(Double.valueOf(visor.getValue()));
+        calculadora.fv();
+        visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void pv () {
+        calculadora.setVisor(Double.valueOf(visor.getValue()));
+        calculadora.pv();
+        visor.setValue(String.format("%f", calculadora.getVisor()));
+        status = NORMAL;
+    }
+
+    public void clear () {
+        calculadora.clear();
+        visor.setValue("0,00");
         status = NORMAL;
     }
 }
