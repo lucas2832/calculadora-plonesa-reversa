@@ -132,9 +132,12 @@ public class CalculadoraViewModel {
     }
 
     public void enter() {
-        calculadora.setVisor(Double.valueOf(visor.getValue()));
-        calculadora.enter();
-        status = NORMAL;
+        if (status == DIGITANDO) {
+            calculadora.setVisor(Double.valueOf(visor.getValue()));
+            calculadora.enter();
+            status = NORMAL;
+        }
+
     }
 
     public void soma() {
