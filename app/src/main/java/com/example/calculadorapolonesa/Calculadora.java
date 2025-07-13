@@ -6,12 +6,17 @@ public class Calculadora {
     private double operando;
     private double visor;
     private double i;
-    private int flagI;
+
     private double n;
-    private int flagN;
+
     private double fv;
-    private int flagFV;
+
     private double pv;
+
+    //Indica se essas variáveis foram preenchidas ou não
+    private int flagI;
+    private int flagN;
+    private int flagFV;
     private int flagPV;
 
     public Calculadora() {
@@ -99,6 +104,11 @@ public class Calculadora {
             pv = visor;
             flagPV = PREENCHIDO;
         }
+    }
+
+    public void chs () {
+        operando = -visor;
+        visor = operando;
     }
 
     public void calculoFV () {

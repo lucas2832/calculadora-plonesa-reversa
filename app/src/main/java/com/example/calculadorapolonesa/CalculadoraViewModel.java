@@ -201,4 +201,14 @@ public class CalculadoraViewModel {
         visor.setValue("0,00");
         status = NORMAL;
     }
+
+    public void chs () {
+        if (status == DIGITANDO) {
+            calculadora.setVisor(Double.valueOf(visor.getValue()));
+            calculadora.chs();
+            visor.setValue(String.format("%f", calculadora.getVisor()));
+            status = NORMAL;
+        }
+
+    }
 }
